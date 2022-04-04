@@ -776,13 +776,159 @@ Skills
 Timeline
 ===============
 */
+.timeline-center {
+  width: 80vw;
+  max-width: 40rem;
+}
 
+.timeline-item {
+  border-top: 2px dashed var(--clr-primary-5);
+  margin-bottom: 0;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.timeline-item p {
+  margin: 0;
+}
+
+.timeline-item:nth-child(even) {
+  border-left: 2px dashed var(--clr-primary-5);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  margin-right: 2rem;
+  padding-right: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  border-right: 2px dashed var(--clr-primary-5);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin-left: 2rem;
+  padding-left: 0;
+}
+
+.timeline-item:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+}
+
+.timeline-item:last-child {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.timeline-item:nth-child(even) .number {
+  left: 0;
+}
+
+.timeline-item:nth-child(odd) .number {
+  /* 
+  Also works
+  left: 100%; */
+
+  right: 0;
+  transform: translate(50%, -50%);
+}
 /*
 =============== 
 Blog
 ===============
 */
 
+.blog {
+  background-color: var(--clr-grey-10);
+}
+
+.card {
+  position: relative;
+  height: 27rem;
+  perspective: 1500px;
+  margin-bottom: 1.5rem;
+}
+
+.card-side {
+  backface-visibility: hidden;
+  transition: all 2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+}
+
+.card-front {
+  background-color: var(--clr-white);
+}
+
+.card-back {
+  background-color: var(--clr-primary-10);
+  transform: rotateY(180deg);
+  display: grid;
+  place-items: center;
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0);
+}
+
+.card-info {
+  padding: 1rem 1.5rem;
+}
+
+.card-front img {
+  height: 13rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.card-footer img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-footer p {
+  text-transform: uppercase;
+  margin-bottom: 0;
+  justify-self: end;
+  color: var(--clr-primary-6);
+  font-size: 0.85rem;
+}
+
+.blog-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1rem;
+}
 /*
 =============== 
 Footer
