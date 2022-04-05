@@ -742,6 +742,8 @@ Skills
 .skills {
   background-color: var(--clr-primary-10);
   margin-top: 5rem;
+  position: relative;
+  z-index: -2;
 }
 
 .skills h3 {
@@ -764,7 +766,6 @@ Skills
   height: 1rem;
   width: 100%;
   position: relative;
-  z-index: -2;
 }
 
 .skill-value {
@@ -899,6 +900,8 @@ Blog
 
 .blog {
   background-color: var(--clr-grey-10);
+  position: relative;
+  z-index: -2;
 }
 
 .card {
@@ -907,7 +910,6 @@ Blog
   -webkit-perspective: 1500px;
   perspective: 1500px;
   margin-bottom: 1.5rem;
-  z-index: -2;
 }
 
 .card-side {
