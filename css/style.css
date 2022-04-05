@@ -1064,6 +1064,8 @@ Products Page
 .single-project {
   background-color: var(--clr-grey-10);
   border-radius: var(--radius);
+  position: relative;
+  z-index: -3;
 }
 
 .project-container img {
@@ -1073,7 +1075,6 @@ Products Page
 
 .project-container {
   position: relative;
-  z-index: -3;
 }
 
 .project-icon {
